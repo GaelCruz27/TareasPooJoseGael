@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,12 +7,14 @@ public class Main {
 
         int opcion = 0;
 
-        while (opcion != 4) {
+        while (opcion != 6) {
             System.out.println("\n*** BIEVENIDO ***");
             System.out.println("1. Registrar producto");
             System.out.println("2. Eliminar producto");
             System.out.println("3. Mostrar productos");
-            System.out.println("4. Salir");
+            System.out.println("4. Listar categorías");
+            System.out.println("5. Listar categorías con productos");
+            System.out.println("6. Salir");
 
             System.out.println("Selecciona una opción: ");
             opcion = scanner.nextInt();
@@ -28,8 +28,6 @@ public class Main {
                     System.out.println("Ingresa el nombre del producto");
                     String nombre = scanner.nextLine();
 
-                    scanner.nextLine();
-
                     System.out.println("Ingresa el precio del producto");
                     double precio = scanner.nextDouble();
 
@@ -38,19 +36,18 @@ public class Main {
                     System.out.println("Ingresa la descripción del producto");
                     String descripcion = scanner.nextLine();
 
-                    scanner.nextLine();
+                    System.out.println("Ingresa el ID de la categoría del producto");
+                    int categoriaId = scanner.nextInt();
 
-                    System.out.println("Ingresa la categoría del producto");
-                    String categoria = scanner.nextLine();
-
-                    scanner.nextLine();
+                    if (!inventario.categoriaExiste(categoriaId)) {
+                        System.out.println("No existe una categoría con el ID ingresado. Intenta de nuevo.");
+                        break;
+                    }
 
                     System.out.println("Ingresa el stock del producto");
                     int stock = scanner.nextInt();
 
-                    System.out.println(nombre);
-
-                    Producto producto = new Producto(nombre, precio, descripcion, categoria, stock);
+                    Producto producto = new Producto(nombre, precio, descripcion, categoriaId, stock);
                     inventario.registrarProducto(producto);
 
                     System.out.println("\nProducto registrado correctamente");
@@ -67,6 +64,12 @@ public class Main {
                     inventario.mostrarProductos();
                     break;
                 case 4:
+                    inventario.listarCategorias();
+                    break;
+                case 5:
+                    inventario.listarCategoriasConProductos();
+                    break;
+                case 6:
                     System.out.println("Hasta luego");
                     return;
             }
