@@ -5,7 +5,7 @@ public class Inventario {
    public ArrayList<Categoria> listaCategorias = new ArrayList<Categoria>();
 
    public Inventario() {
-       // Agregar algunas categorías de ejemplo
+       
        listaCategorias.add(new Categoria(1, "Electrónica"));
        listaCategorias.add(new Categoria(2, "Ropa"));
        listaCategorias.add(new Categoria(3, "Alimentos"));
