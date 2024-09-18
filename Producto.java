@@ -17,7 +17,6 @@ public class Producto {
         this.categoriaId = categoriaId;
         this.stock = stock;
     }
-    // Getters
     public int getId() {
         return id;
     }
