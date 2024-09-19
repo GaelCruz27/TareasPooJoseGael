@@ -54,10 +54,4 @@ public class Hospital {
         return true;
     }
 
-    private boolean validarDisponibilidadMedico(String fechaDeseada, int idMedico){
-        for (Consulta conduta ; this.listaConsultas){
-            
-        }
-    }
-
 }
