@@ -36,7 +36,6 @@ public class Main {
 
             switch (opcion) {
                 case 1:
-                    //P--{año actual}---{mes actual}{Longuitud pacientes =1}{1,2000}
                     System.out.println("A elegido la opcion REGISTRAR PACIENTE");
                     String id = hospital.generarIDPaciente();
 

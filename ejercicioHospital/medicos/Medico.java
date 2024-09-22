@@ -8,7 +8,6 @@ public class Medico {
     private String telefono;
     private String rfc;
 
-    //constructor
     public Medico(String id, String nombre, String apellidos, String fechaNacimiento, String telefono, String rfc) {
         this.id = id;
         this.nombre = nombre;

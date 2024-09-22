@@ -6,15 +6,11 @@ public class Consultorio {
     public int numeroConsultorio;
 
 
-//    constructor
-
     public Consultorio(String id, int piso, int numeroConsultorio) {
         this.id = id;
         this.piso = piso;
         this.numeroConsultorio = numeroConsultorio;
     }
-
-//    getter
 
     public String getId() {
         return id;

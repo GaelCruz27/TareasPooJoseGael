@@ -18,7 +18,6 @@ public class Hospital {
     public ArrayList<Consultorio> listaConsultorios = new ArrayList<>();
     private ValidadorHospital validador = new ValidadorHospital();
 
-    //    metodos
     public void registrarPaciente(Paciente paciente) {
         this.listaPacientes.add(paciente);
     }
@@ -28,20 +27,11 @@ public class Hospital {
     }
 
     public void registrarConsulta(Consulta consulta) {
-        // paciente no tenga consulta en esa fecha
 
         if (!validador.validarDispolnibilidadEnFechaConsulta(consulta.getFechaHora(), consulta.getConsultorio().getNumeroConsultorio(), this.listaConsultas)) {
             System.out.println("Ya existe una consulta registrada par esa fecha");
             return;
         }
-
-
-        /**
-         * 1. No existe una consulta en la fecha indicafa en el consultorio indicado
-         * 2. Fecha valida
-         * 3. Medico no tenga una consulta en esa fecha en otro consultorio
-         * 4. Paciente no tenga una consulta en esa fecha
-         */
 
         if (!validador.validarDisponibilidadMedico(consulta.getFechaHora(), consulta.getMedico().getId(), this.listaConsultas)) {
             System.out.println("El medico no tiene disponibilidad en esa fecha");
@@ -82,9 +72,8 @@ public class Hospital {
             System.out.println(" ");
         }
     }
-
+    //PACIENTE
     public String generarIDPaciente() {
-        //P--{año actual}---{mes actual}{Longuitud pacientes =1}{1,100000}
         Random random = new Random();
         LocalDate fecha = LocalDate.now();
         int anoActual = fecha.getYear();
@@ -98,10 +87,6 @@ public class Hospital {
     }
 
     public void mostrarPacientePorId(String id) {
-      /* Optional<Paciente> pacienteEncontrado = this.listaPacientes.stream().filter(paciente -> paciente.getId().equals(id)).findFirst();
-       if(pacienteEncontrado.isPresent()){
-           System.out.println(pacienteEncontrado.getId().equals(id));
-       }*/
         for (Paciente paciente : this.listaPacientes) {
             if (paciente.getId().equals(id)) {
                 System.out.println(paciente.mostrarDatos());
@@ -115,7 +100,6 @@ public class Hospital {
     // MEDICOS
 
     public String generarIDMedico(Medico medico) {
-        //M-{Primeras 2 letras de su apellido} - {ultimo dígito de su año de nacimiento} - {año actual} - {numero aleatorio entre 50 y 700000} - {longitud de la lista de medicos + 1}
         LocalDate fecha = LocalDate.now();
         int anoActual = fecha.getYear();
         Random random = new Random();
@@ -140,7 +124,6 @@ public class Hospital {
 
     //CONSULTORIOS
     public String generarIDConsultorio(Consultorio consultorio){
-        // C-{longitud de la lista de consultorios + 1}-{dia actual}-{año actual}-{numero aleatorio entre 1 y 500000}
         Random random = new Random();
         int numeroAleatorio = random.nextInt(1, 500000);
         LocalDate fecha = LocalDate.now();

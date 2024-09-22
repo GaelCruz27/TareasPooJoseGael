@@ -9,7 +9,6 @@ public class Paciente {
     public char sexo;
     private String telefono;
 
-    //constructor
     public Paciente(String id, String nombre, String apellidos, String fechaNacimiento, String tipoSangre, char sexo, String telefono) {
         this.id = id;
         this.nombre = nombre;

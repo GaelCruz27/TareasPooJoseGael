@@ -11,8 +11,6 @@ public class Consulta {
     public Medico medico;
     public Consultorio consultorio;
 
-
-    //    constructor
     public Consulta(int id, String fechaHora, Paciente paciente, Medico medico, Consultorio consultorio) {
         this.id = id;
         this.fechaHora = fechaHora;
@@ -20,7 +18,6 @@ public class Consulta {
         this.medico = medico;
         this.consultorio = consultorio;
     }
-//    getter
 
     public int getId() {
         return id;
