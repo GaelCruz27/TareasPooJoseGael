@@ -1,4 +1,6 @@
 package ejercicioHospital;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 import ejercicioHospital.hospital.Hospital;
 import ejercicioHospital.pacientes.Paciente;
@@ -47,9 +49,19 @@ public class Main {
                     String apellido = sc.nextLine();
                     sc.nextLine();
 
-                    System.out.println("Ingrese la fecha de nacimiento del paciente: ");
-                    String fechaNacimiento = sc.nextLine();
+                    System.out.println("Ingrese la año de nacimiento del paciente: *aaaa*");
+                    int anio = sc.nextInt();
                     sc.nextLine();
+
+                    System.out.println("Ingrese el mes de nacimiento del paciente: *mm*");
+                    int mes = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingrese el dia de nacimiento del paciente: *dd*");
+                    int dia = sc.nextInt();
+                    sc.nextLine();
+
+                    LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
 
                     System.out.println("Ingrese el tipo de sangre del paciente: ");
                     String tipoSangre = sc.nextLine();
@@ -81,9 +93,19 @@ public class Main {
                     String apellidoMedico = sc.nextLine();
                     sc.nextLine();
 
-                    System.out.println("Ingrese la fecha de nacimiento del medico(DDMMYYYY): ");
-                    String fechaNacimientoMedico = sc.nextLine();
+                    System.out.println("Ingrese la año de nacimiento del medico: *aaaa*");
+                    int anioMedico = sc.nextInt();
                     sc.nextLine();
+
+                    System.out.println("Ingrese el mes de nacimiento del medico: *mm*");
+                    int mesMedico = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingrese el dia de nacimiento del medico: *dd*");
+                    int diaMedioco = sc.nextInt();
+                    sc.nextLine();
+
+                    LocalDate fechaNacimientoMedico = LocalDate.of(anioMedico, mesMedico, diaMedioco);
 
                     System.out.println("Ingrese el telefono del medico: ");
                     String telefonoMedico = sc.nextLine();
@@ -115,6 +137,47 @@ public class Main {
                     hospital.registrarConsultorios(consultorio);
                     break;
                 case 4:
+                    System.out.println("Seleccionaste la opcion para registrar una consulta");
+
+                    int Id =1;
+
+                    System.out.println("Ingresa el dia de la consulta que deseas tener");
+                    int diaConsulta=sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingrese el mes de la consulta: ");
+                    int mesConsulta=sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingrese el anio de la consulta: ");
+                    int anioConsulta=sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingrese la hora de la consulta: ");
+                    int horaConsulta=sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Ingresa los minutos de la consulta: ");
+                    int minutosConsulta=sc.nextInt();
+                    sc.nextLine();
+
+                    LocalDateTime fechaConsulta= LocalDateTime.of(anioConsulta, mesConsulta, diaConsulta, horaConsulta, minutosConsulta);
+
+                    System.out.println("Ingresa el id del paciente ");
+                    String pacienteId=sc.nextLine();
+
+                    Paciente paccienteconsulta=hospital.obtenerPacientePorId(pacienteId);
+
+                    System.out.println("Ingresa el id del medico");
+                    String medicoId=sc.nextLine();
+
+                    Medico medicoconsulta=hospital.obtenerMedicoPorId(medicoId);
+
+                    System.out.println("Ingresa el id del consultorio");
+                    String consultorioId=sc.nextLine();
+
+                    Consultorio consutorio=hospital.obtenerConsultorioPorId(consultorioId);
+
                     break;
                 case 5:
                     System.out.println("A elegido la opcion MOSTRAR PACIENTES");
@@ -132,9 +195,12 @@ public class Main {
                     hospital.mostrarConsultorios();
                     break;
                 case 8:
+                    System.out.println("A elegido la opcion MOSTRAR CONSULTAS");
+                    System.out.println("Las consultas son los siguientes: ");
+                    hospital.mostrarConsultas();
                     break;
                 case 9:
-                    System.out.println("\nA elegido la opcion MOSTRAR PACIENTE POR ID");
+                    System.out.println("/nA elegido la opcion MOSTRAR PACIENTE POR ID");
                     sc.nextLine();
                     System.out.println("Ingresa el ID del paciente que deseas buscar");
                     String idPaciente = sc.nextLine();

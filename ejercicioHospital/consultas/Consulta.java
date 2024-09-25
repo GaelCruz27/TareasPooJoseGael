@@ -4,26 +4,36 @@ import ejercicioHospital.consultorio.Consultorio;
 import ejercicioHospital.medicos.Medico;
 import ejercicioHospital.pacientes.Paciente;
 
+import java.time.LocalDateTime;
+
 public class Consulta {
     public int id;
-    public String fechaHora;
+    public LocalDateTime fechaHora;
     public Paciente paciente;
     public Medico medico;
     public Consultorio consultorio;
 
-    public Consulta(int id, String fechaHora, Paciente paciente, Medico medico, Consultorio consultorio) {
+    public Consulta(int id, LocalDateTime fechaHora, Paciente paciente, Medico medico, Consultorio consultorio) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.paciente = paciente;
         this.medico = medico;
         this.consultorio = consultorio;
     }
-
+    public String mostrarDatos() {
+        String datos = String.format("Id: %s, Fecha y Hota: : %s, Paciente %s, Medico: %s, Consultotio %s",
+                id,
+                fechaHora,
+                paciente,
+                medico,
+                consultorio);
+        return datos;
+    }
     public int getId() {
         return id;
     }
 
-    public String getFechaHora() {
+    public LocalDateTime getFechaHora() {
         return fechaHora;
     }
 

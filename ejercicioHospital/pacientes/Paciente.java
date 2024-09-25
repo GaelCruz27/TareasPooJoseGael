@@ -1,15 +1,17 @@
 package ejercicioHospital.pacientes;
 
+import java.time.LocalDate;
+
 public class Paciente {
     public String id;
     public String nombre;
     public String apellidos;
-    public String fechaNacimiento;
+    public LocalDate fechaNacimiento;
     public String tipoSangre;
     public char sexo;
     private String telefono;
 
-    public Paciente(String id, String nombre, String apellidos, String fechaNacimiento, String tipoSangre, char sexo, String telefono) {
+    public Paciente(String id, String nombre, String apellidos, LocalDate fechaNacimiento, String tipoSangre, char sexo, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -18,9 +20,8 @@ public class Paciente {
         this.sexo = sexo;
         this.telefono = telefono;
     }
-
     public String mostrarDatos() {
-        String datos = String.format("Id: %s, nombre: %s, apellidos: %s, fecha de nacimiento: %s, tipo de sangre: %s, sexo: %c, telefono: %s",
+        String datos = String.format("Id: %s, nombre: %s, apellidos: %s, fecha de nacimiento: %s, Tipo de sangre: %s, Sexo: %s, Telefono: %s",
                 id,
                 nombre,
                 apellidos,
@@ -28,9 +29,9 @@ public class Paciente {
                 tipoSangre,
                 sexo,
                 telefono);
+
         return datos;
     }
-
     public String getId() {
         return id;
     }
@@ -43,7 +44,7 @@ public class Paciente {
         return apellidos;
     }
 
-    public String getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
