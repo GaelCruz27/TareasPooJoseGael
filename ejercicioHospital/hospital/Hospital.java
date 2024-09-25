@@ -79,7 +79,7 @@ public class Hospital {
 
     public void mostrarConsultas() {
         for (Consulta consulta : this.listaConsultas) {
-            System.out.println("ID: " + (consulta.getId()));
+
             System.out.println("Fecha y hora: "+ (consulta.getFechaHora()));
             System.out.println("Pasciente: "+ (consulta.getPaciente()));
             System.out.println("Medico: "+ (consulta.getMedico()));
@@ -177,7 +177,7 @@ public class Hospital {
         int diaActual = fecha.getDayOfMonth();
         int anoActual = fecha.getYear();
         int longitudConsultoriosMasUno = this.listaConsultorios.size() + 1;
-        String id= String.format("CS%d%d%d%d", longitudConsultoriosMasUno, diaActual, anoActual, numeroAleatorio);
+        String id= String.format("CON%d%d%d%d", longitudConsultoriosMasUno, diaActual, anoActual, numeroAleatorio);
         return id;
 
 }

@@ -20,6 +20,10 @@ public class Consulta {
         this.medico = medico;
         this.consultorio = consultorio;
     }
+
+    public Consulta(String id2  , int diaConsulta, int mesConsulta, int anioConsulta, int horaConsulta, int minutosConsulta, String pacienteId, String medicoId, String consultorioId) {
+    }
+
     public String mostrarDatos() {
         String datos = String.format("Id: %s, Fecha y Hota: : %s, Paciente %s, Medico: %s, Consultotio %s",
                 id,
@@ -29,7 +33,7 @@ public class Consulta {
                 consultorio);
         return datos;
     }
-    public int getId() {
+    public int getId(String s) {
         return id;
     }
 

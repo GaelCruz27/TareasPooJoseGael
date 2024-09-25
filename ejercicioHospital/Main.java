@@ -139,7 +139,8 @@ public class Main {
                 case 4:
                     System.out.println("Seleccionaste la opcion para registrar una consulta");
 
-                    int Id =1;
+                    String idConsulta = "0";
+
 
                     System.out.println("Ingresa el dia de la consulta que deseas tener");
                     int diaConsulta=sc.nextInt();
@@ -178,6 +179,9 @@ public class Main {
 
                     Consultorio consutorio=hospital.obtenerConsultorioPorId(consultorioId);
 
+                    Consulta consulta = new Consulta(idConsulta, diaConsulta, mesConsulta, anioConsulta, horaConsulta, minutosConsulta, pacienteId, medicoId, consultorioId);
+                    consulta.getId(hospital.generarIDConsulta(consulta));
+                    hospital.registrarConsulta(consulta);
                     break;
                 case 5:
                     System.out.println("A elegido la opcion MOSTRAR PACIENTES");
