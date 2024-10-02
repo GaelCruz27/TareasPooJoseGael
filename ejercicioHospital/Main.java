@@ -1,15 +1,12 @@
 package ejercicioHospital;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Scanner;
-import ejercicioHospital.hospital.Hospital;
-import ejercicioHospital.pacientes.Paciente;
-import ejercicioHospital.medicos.Medico;
 import ejercicioHospital.consultas.Consulta;
 import ejercicioHospital.consultorio.Consultorio;
+import ejercicioHospital.hospital.Hospital;
+import ejercicioHospital.medicos.Medico;
+import ejercicioHospital.pacientes.Paciente;
 
-
-import java.sql.SQLOutput;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
@@ -34,32 +31,28 @@ public class Main {
             System.out.println("10. Mostrar Medico por ID");
             System.out.println("11. Mostrar Consultorio por ID");
             System.out.println("12. Salir");
-            opcion = sc.nextInt();
+            opcion = Integer.parseInt(sc.nextLine());
 
             switch (opcion) {
                 case 1:
+                    //P--{año actual}---{mes actual}{Longuitud pacientes =1}{1,2000}
                     System.out.println("A elegido la opcion REGISTRAR PACIENTE");
                     String id = hospital.generarIDPaciente();
 
                     System.out.println("Ingrese el nombre del paciente: ");
                     String nombre = sc.nextLine();
-                    sc.nextLine();
 
-                    System.out.println("Ingrese el apellido del paciente: ");
-                    String apellido = sc.nextLine();
-                    sc.nextLine();
 
-                    System.out.println("Ingrese la año de nacimiento del paciente: *aaaa*");
-                    int anio = sc.nextInt();
-                    sc.nextLine();
+                    System.out.println("Ingrese el apellidos del paciente: ");
+                    String apellidos = sc.nextLine();
 
-                    System.out.println("Ingrese el mes de nacimiento del paciente: *mm*");
-                    int mes = sc.nextInt();
-                    sc.nextLine();
 
-                    System.out.println("Ingrese el dia de nacimiento del paciente: *dd*");
-                    int dia = sc.nextInt();
-                    sc.nextLine();
+                    System.out.println("Ingresa año de nacimiento: ");
+                    int anio = Integer.parseInt(sc.nextLine());
+                    System.out.println("Ingrese el mes de nacimiento: ");
+                    int mes = Integer.parseInt(sc.nextLine());
+                    System.out.println("Ingresa sia de nacimiento:");
+                    int dia = Integer.parseInt(sc.nextLine());
 
                     LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
 
@@ -68,14 +61,20 @@ public class Main {
                     sc.nextLine();
 
                     System.out.println("Ingrese el sexo del paciente: ");
-                    char sexo = sc.next().charAt(0);
-                    sc.nextLine();
+                    char sexo = sc.nextLine().charAt(0);
 
-                    System.out.println("Ingrese el teléfono del paciente: ");
-                    String telefono = sc.nextLine();
-                    sc.nextLine();
 
-                    Paciente paciente = new Paciente(id, nombre, apellido, fechaNacimiento, tipoSangre, sexo, telefono);
+                    //tarea 12
+                    String telefono = null;
+                    while (telefono == null) {
+                        System.out.println("Ingrese el teléfono del paciente: ");
+                        telefono = sc.nextLine();
+                        if (hospital.existeNumeroTelefonoPaciente(telefono)) {
+                            System.out.println("El numero de telefono ya esta registrado, intente de nuevo.");
+                            telefono = null;
+                        }
+                    }
+                    Paciente paciente = new Paciente(id, nombre, apellidos, fechaNacimiento, tipoSangre, sexo, telefono);
                     hospital.registrarPaciente(paciente);
 
                     System.out.println("Paciente registrado exitosamente");
@@ -83,106 +82,142 @@ public class Main {
 
                 case 2:
                     System.out.println("A elegido la opcion REGISTRAR MEDICO");
-                    String idMedico="Default";
-                    sc.nextLine();
 
                     System.out.println("Ingrese el nombre del medico: ");
                     String nombreMedico = sc.nextLine();
+                    sc.nextLine();
 
                     System.out.println("Ingrese el apellido del medico: ");
                     String apellidoMedico = sc.nextLine();
                     sc.nextLine();
 
-                    System.out.println("Ingrese la año de nacimiento del medico: *aaaa*");
-                    int anioMedico = sc.nextInt();
-                    sc.nextLine();
+                    System.out.println("Infresa año de nacimiento: ");
+                    int anioMedico = Integer.parseInt(sc.nextLine());
+                    System.out.println("Ingrese el mes de nacimiento: ");
+                    int mesMedico = Integer.parseInt(sc.nextLine());
+                    System.out.println("Ingresa dia de nacimiento:");
+                    int diaMedico = Integer.parseInt(sc.nextLine());
+                    LocalDate fechaNacimientoMedico = LocalDate.of(anioMedico, mesMedico, diaMedico);
 
-                    System.out.println("Ingrese el mes de nacimiento del medico: *mm*");
-                    int mesMedico = sc.nextInt();
-                    sc.nextLine();
+                    //tarea 12
+                    String telefonoMedico = null;
 
-                    System.out.println("Ingrese el dia de nacimiento del medico: *dd*");
-                    int diaMedioco = sc.nextInt();
-                    sc.nextLine();
+                    while (telefonoMedico == null) {
+                        System.out.println("Ingrese el telefono del medico: ");
+                        telefonoMedico = sc.nextLine();
+                        if (hospital.existeNumeroTelefonoMedico(telefonoMedico)) {
+                            System.out.println("El numero de telefono ya esta registrado, intente de nuevo.");
+                            telefonoMedico = null;
+                        }
+                    }
 
-                    LocalDate fechaNacimientoMedico = LocalDate.of(anioMedico, mesMedico, diaMedioco);
+                    String rfcMedico = null;
+                    while (rfcMedico == null) {
+                        System.out.println("Ingrese el RFC del medico: ");
+                        rfcMedico = sc.nextLine();
+                        if (hospital.existeRFCMedico(rfcMedico)) {
+                            System.out.println("El RFC del medico ya esta registrado, intente de nuevo.");
+                            rfcMedico = null;
+                        }
+                    }
 
-                    System.out.println("Ingrese el telefono del medico: ");
-                    String telefonoMedico = sc.nextLine();
-                    sc.nextLine();
-
-                    System.out.println("Ingrese el RFC del medico: ");
-                    String rfcMedico = sc.nextLine();
-                    sc.nextLine();
-
+                    String idMedico = hospital.generarIDMedico(fechaNacimientoMedico.getYear(), apellidoMedico);
                     Medico medico = new Medico(idMedico, nombreMedico, apellidoMedico, fechaNacimientoMedico, telefonoMedico, rfcMedico);
-                    medico.setId(hospital.generarIDMedico(medico));
+
                     hospital.registrarMedico(medico);
                     break;
 
                 case 3:
                     System.out.println("A elegido la opcion REGISTRAR CONSULTORIO");
-                    String idConsultorio = "0";
+
+                    String idConsultorio = hospital.generarIDConsultorio();
 
                     System.out.println("Ingrese el piso del consultorio: ");
-                    int piso = sc.nextInt();
+                    int piso = Integer.parseInt(sc.nextLine());
                     sc.nextLine();
 
                     System.out.println("Ingrese el numero del consultorio: ");
-                    int numero = sc.nextInt();
+                    int numero = Integer.parseInt(sc.nextLine());
                     sc.nextLine();
 
                     Consultorio consultorio = new Consultorio(idConsultorio, piso, numero);
-                    consultorio.setId(hospital.generarIDConsultorio(consultorio));
                     hospital.registrarConsultorios(consultorio);
                     break;
                 case 4:
-                    System.out.println("Seleccionaste la opcion para registrar una consulta");
+                    System.out.println("\nSeleccionaste la opcion de para registrar consulta");
+                    // int id = 1;
 
-                    String idConsulta = "0";
+                    String idConsulta = hospital.generarIConsulta();
+
+                    LocalDateTime fechaConsulta = null;
+
+                    while (fechaConsulta == null) {
+
+                        System.out.println("Ingresa el dia de la consulta deseada");
+                        int diaConsulta = sc.nextInt();
+                        sc.nextLine();
+
+                        System.out.println("Ingresa el mes de la consulta deseada");
+                        int mesConsulta = sc.nextInt();
+                        sc.nextLine();
+
+                        System.out.println("Ingresa el anio de la consulta deseada");
+                        int anioConsulta = sc.nextInt();
+                        sc.nextLine();
+
+                        System.out.println("Ingresa la hora de la consulta deseada");
+                        int horaConsulta = sc.nextInt();
+                        sc.nextLine();
+                        System.out.println("Ingresa los minutos de la consulta deseada");
+                        int minutosConsulta = sc.nextInt();
+                        sc.nextLine();
+
+                        fechaConsulta = LocalDateTime.of(anioConsulta, mesConsulta, diaConsulta, horaConsulta, minutosConsulta);
+                        //tarea12
+                        if (!hospital.validarFechaConsulta(fechaConsulta)) {
+                            System.out.println("La fecha no puede estar en el pasado");
+                            fechaConsulta = null;
+                        }
+                    }
 
 
-                    System.out.println("Ingresa el dia de la consulta que deseas tener");
-                    int diaConsulta=sc.nextInt();
-                    sc.nextLine();
+                    Paciente pacienteConsulta = null;
+                    while (pacienteConsulta == null) {
+                        System.out.println("Ingresa el id del paciente: ");
+                        String pacienteId = sc.nextLine();
+                        pacienteConsulta = hospital.obtenerPacientePorId(pacienteId);
+                        if (pacienteConsulta == null) {
+                            System.out.println("\nEl id del paciente no existe, intenta de nuevo\n");
+                        }
+                    }
 
-                    System.out.println("Ingrese el mes de la consulta: ");
-                    int mesConsulta=sc.nextInt();
-                    sc.nextLine();
+                    Medico medicoConsulta = null;
+                    while (medicoConsulta == null) {
+                        System.out.println("Ingresa el id del medico:");
+                        String medicoId = sc.nextLine();
+                        medicoConsulta = hospital.obtenerMedicoPorId(medicoId);
+                        if (medicoConsulta == null) {
+                            System.out.println("\nEl id del medico no existe, intenta de nuevo\n");
+                        }
+                    }
 
-                    System.out.println("Ingrese el anio de la consulta: ");
-                    int anioConsulta=sc.nextInt();
-                    sc.nextLine();
-
-                    System.out.println("Ingrese la hora de la consulta: ");
-                    int horaConsulta=sc.nextInt();
-                    sc.nextLine();
-
-                    System.out.println("Ingresa los minutos de la consulta: ");
-                    int minutosConsulta=sc.nextInt();
-                    sc.nextLine();
-
-                    LocalDateTime fechaConsulta= LocalDateTime.of(anioConsulta, mesConsulta, diaConsulta, horaConsulta, minutosConsulta);
-
-                    System.out.println("Ingresa el id del paciente ");
-                    String pacienteId=sc.nextLine();
-
-                    Paciente paccienteconsulta=hospital.obtenerPacientePorId(pacienteId);
-
-                    System.out.println("Ingresa el id del medico");
-                    String medicoId=sc.nextLine();
-
-                    Medico medicoconsulta=hospital.obtenerMedicoPorId(medicoId);
-
-                    System.out.println("Ingresa el id del consultorio");
-                    String consultorioId=sc.nextLine();
-
-                    Consultorio consutorio=hospital.obtenerConsultorioPorId(consultorioId);
-
-                    Consulta consulta = new Consulta(idConsulta, diaConsulta, mesConsulta, anioConsulta, horaConsulta, minutosConsulta, pacienteId, medicoId, consultorioId);
-                    consulta.getId(hospital.generarIDConsulta(consulta));
+                    Consultorio consultorioConsulta = null;
+                    while (consultorioConsulta == null) {
+                        System.out.println("Ingresa el id del consultorio: ");
+                        String consultorioId = sc.nextLine();
+                        consultorioConsulta = hospital.obtenerConsultorioPorId(consultorioId);
+                        if (consultorioConsulta == null) {
+                            System.out.println("\nEl id del consultorio no existe, intenta de nuevo\n");
+                        }
+                    }
+                    Consulta consulta = new Consulta(idConsulta, fechaConsulta, pacienteConsulta, medicoConsulta, consultorioConsulta);
                     hospital.registrarConsulta(consulta);
+                    System.out.println(hospital.listaConsultas.get(0));
+
+
                     break;
+
+
                 case 5:
                     System.out.println("A elegido la opcion MOSTRAR PACIENTES");
                     System.out.println("Los pacientes son los siguientes: ");
@@ -200,11 +235,11 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("A elegido la opcion MOSTRAR CONSULTAS");
-                    System.out.println("Las consultas son los siguientes: ");
+                    System.out.println("Las consultas son lss siguientes: ");
                     hospital.mostrarConsultas();
                     break;
                 case 9:
-                    System.out.println("/nA elegido la opcion MOSTRAR PACIENTE POR ID");
+                    System.out.println("\nA elegido la opcion MOSTRAR PACIENTE POR ID");
                     sc.nextLine();
                     System.out.println("Ingresa el ID del paciente que deseas buscar");
                     String idPaciente = sc.nextLine();

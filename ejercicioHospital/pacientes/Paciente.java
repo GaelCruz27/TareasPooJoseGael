@@ -11,6 +11,7 @@ public class Paciente {
     public char sexo;
     private String telefono;
 
+
     public Paciente(String id, String nombre, String apellidos, LocalDate fechaNacimiento, String tipoSangre, char sexo, String telefono) {
         this.id = id;
         this.nombre = nombre;
@@ -20,18 +21,7 @@ public class Paciente {
         this.sexo = sexo;
         this.telefono = telefono;
     }
-    public String mostrarDatos() {
-        String datos = String.format("Id: %s, nombre: %s, apellidos: %s, fecha de nacimiento: %s, Tipo de sangre: %s, Sexo: %s, Telefono: %s",
-                id,
-                nombre,
-                apellidos,
-                fechaNacimiento,
-                tipoSangre,
-                sexo,
-                telefono);
 
-        return datos;
-    }
     public String getId() {
         return id;
     }
@@ -59,4 +49,10 @@ public class Paciente {
     public String getTelefono() {
         return telefono;
     }
+
+    public String mostrarDatos(){
+        String datos = String.format("Id: %s,Nombre: %s,Apellido: %s,Fecha Nacimiento: %s,Tipo sangre: %s,Sexo: %s,Telefono: %s",id, nombre, apellidos, fechaNacimiento, tipoSangre, sexo, telefono);
+        return datos;
+    }
+
 }

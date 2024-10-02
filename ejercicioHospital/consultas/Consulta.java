@@ -7,13 +7,17 @@ import ejercicioHospital.pacientes.Paciente;
 import java.time.LocalDateTime;
 
 public class Consulta {
-    public int id;
+    public String id;
+
     public LocalDateTime fechaHora;
+
     public Paciente paciente;
+
     public Medico medico;
+
     public Consultorio consultorio;
 
-    public Consulta(int id, LocalDateTime fechaHora, Paciente paciente, Medico medico, Consultorio consultorio) {
+    public Consulta(String id, LocalDateTime fechaHora, Paciente paciente, Medico medico, Consultorio consultorio) {
         this.id = id;
         this.fechaHora = fechaHora;
         this.paciente = paciente;
@@ -21,19 +25,7 @@ public class Consulta {
         this.consultorio = consultorio;
     }
 
-    public Consulta(String id2  , int diaConsulta, int mesConsulta, int anioConsulta, int horaConsulta, int minutosConsulta, String pacienteId, String medicoId, String consultorioId) {
-    }
-
-    public String mostrarDatos() {
-        String datos = String.format("Id: %s, Fecha y Hota: : %s, Paciente %s, Medico: %s, Consultotio %s",
-                id,
-                fechaHora,
-                paciente,
-                medico,
-                consultorio);
-        return datos;
-    }
-    public int getId(String s) {
+    public String getId() {
         return id;
     }
 
@@ -51,5 +43,13 @@ public class Consulta {
 
     public Consultorio getConsultorio() {
         return consultorio;
+    }
+    public String mostrarConsulta() {
+        return String.format("Fecha: %s, Paciente: %s, Medico: %s, Num.Consultorio: %d", fechaHora, paciente, medico, consultorio);
+    }
+
+    public String mostrarInformacion() {
+        String info = String.format("\nId: %s, Fecha: %s, IdPaciente: %s, Nombre del Paciente: %s, IdMedico: %s, Nombre del Medico: %s,Piso Consultorio: %d, Numero Consultorio; %d", id, fechaHora, paciente.getId(), paciente.getNombre(), medico.getId(), medico.getNombre(), consultorio.getPiso(), consultorio.getNumeroConsultorio() );
+        return info;
     }
 }
