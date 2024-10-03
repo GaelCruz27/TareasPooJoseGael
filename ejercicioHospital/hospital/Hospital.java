@@ -190,4 +190,38 @@ public class Hospital {
         return false;
     }
 
+    public boolean mostrarConsultasPaciente(String paciente) {
+        for(Consulta consulta : this.listaConsultas){
+            if(consulta.getPaciente().getNombre().equals(paciente)){
+                System.out.println(consulta.mostrarInformacion());
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    public boolean mostrarConsultasMedico(String medico) {
+        for(Consulta consulta : this.listaConsultas){
+            if(consulta.getMedico().getNombre().equals(medico)){
+                System.out.println(consulta.mostrarInformacion());
+                return true;
+            }
+
+        }
+        return false;
+
+    }
+
+
+    public boolean mostrarPacientesMedico(String medico) {
+        for (Consulta consulta : this.listaConsultas) {
+            if (consulta.getMedico().getNombre().equals(medico)) {
+                System.out.println(consulta.getPaciente().mostrarDatos());
+                return true;
+            }
+
+        }
+        return false;
+    }
 }
