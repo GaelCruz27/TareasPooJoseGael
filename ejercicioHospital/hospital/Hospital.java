@@ -2,8 +2,8 @@ package ejercicioHospital.hospital;
 
 import ejercicioHospital.consultas.Consulta;
 import ejercicioHospital.consultorio.Consultorio;
-import ejercicioHospital.medicos.Medico;
-import ejercicioHospital.pacientes.Paciente;
+import ejercicioHospital.usuarios.medicos.Medico;
+import ejercicioHospital.usuarios.pacientes.Paciente;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -27,7 +27,7 @@ public class Hospital {
     }
 
     public void registrarConsulta(Consulta consulta) {
-        // paciente no tenga consulta en esa fecha
+        // usuarios.paciente no tenga consulta en esa fecha
 
         if (!validador.validarDispolnibilidadEnFechaConsulta(consulta.getFechaHora(), consulta.getConsultorio().getNumeroConsultorio(), this.listaConsultas)) {
             System.out.println("Ya existe una consulta registrada par esa fecha");
@@ -99,7 +99,7 @@ public class Hospital {
     }
 
     public String generarIDMedico(int anioMedico, String apellido) {
-        //M-{Primeras 2 letras de su apellido} - {ultimo dígito de su año de nacimiento} - {año actual} - {numero aleatorio entre 50 y 700000} - {longitud de la lista de medicos + 1}
+        //M-{Primeras 2 letras de su apellido} - {ultimo dígito de su año de nacimiento} - {año actual} - {numero aleatorio entre 50 y 700000} - {longitud de la lista de usuarios.medicos + 1}
         int numeroAleatorio = new Random().nextInt(700000+50)+50;
         return String.format("M-%d-%d", anioMedico, numeroAleatorio);
 

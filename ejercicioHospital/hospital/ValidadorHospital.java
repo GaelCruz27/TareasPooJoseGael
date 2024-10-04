@@ -33,3 +33,8 @@ public class ValidadorHospital {
 
 
 }
+ /* for(Consulta consulta : listaConsultas) {
+            if(consulta.getFechaHora().equalsIgnoreCase(fechaDeseada) && numeroConsultorio == consulta.getConsultorio().getNumeroConsultorio()) {
+                return false;
+            }
+        }*/

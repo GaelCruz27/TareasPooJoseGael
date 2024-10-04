@@ -1,17 +1,18 @@
-package ejercicioHospital.medicos;
+package ejercicioHospital.usuarios.medicos;
 
+
+import ejercicioHospital.usuarios.Usuario;
+import ejercicioHospital.usuarios.utils.Rol;
 import java.time.LocalDate;
 
-public class Medico {
-    public String id="0";
-    public String nombre;
-    public String apellidos;
-    public LocalDate fechaNacimiento;
-    private String telefono;
+public class Medico extends Usuario {
+
     private String rfc;
 
     //constructor
-    public Medico(String id, String nombre, String apellidos, LocalDate fechaNacimiento, String telefono, String rfc) {
+    public Medico(String id, String nombre, String apellidos, LocalDate fechaNacimiento, String telefono, String rfc,String contrasenia ) {
+
+        super(id, nombre, apellidos, fechaNacimiento, telefono, contrasenia, Rol.MEDICO);
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -20,25 +21,7 @@ public class Medico {
         this.rfc = rfc;
     }
 
-    public String getId() {
-        return id;
-    }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
 
     public String getRfc() {
         return rfc;

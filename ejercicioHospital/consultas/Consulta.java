@@ -1,8 +1,8 @@
 package ejercicioHospital.consultas;
 
 import ejercicioHospital.consultorio.Consultorio;
-import ejercicioHospital.medicos.Medico;
-import ejercicioHospital.pacientes.Paciente;
+import ejercicioHospital.usuarios.medicos.Medico;
+import ejercicioHospital.usuarios.pacientes.Paciente;
 
 import java.time.LocalDateTime;
 

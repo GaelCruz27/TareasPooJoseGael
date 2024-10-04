@@ -2,8 +2,8 @@ package ejercicioHospital;
 import ejercicioHospital.consultas.Consulta;
 import ejercicioHospital.consultorio.Consultorio;
 import ejercicioHospital.hospital.Hospital;
-import ejercicioHospital.medicos.Medico;
-import ejercicioHospital.pacientes.Paciente;
+import ejercicioHospital.usuarios.medicos.Medico;
+import ejercicioHospital.usuarios.pacientes.Paciente;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -105,7 +105,7 @@ public class Menu {
         System.out.println("\n***SISTEMA HOSPITAL***");
         System.out.println("1. Ver mis consultas");
         System.out.println("2. Ver mis pacientes");
-        System.out.println("3. Consultar paciente");
+        System.out.println("3. Consultar usuarios.paciente");
         System.out.println("4. Salir");
 
         System.out.println("Seleccione una opcion: ");
@@ -128,7 +128,7 @@ public class Menu {
                 break;
             case 3:
 
-                System.out.println("Consultando paciente...");
+                System.out.println("Consultando usuarios.paciente...");
                 break;
             case 4:
                 System.out.println("Saliendo...");
@@ -149,7 +149,7 @@ public class Menu {
         while(opcion != 9) {
             System.out.println("Bienvenido al IMSS ");
             System.out.println("Introduzca la opción que desee:  ");
-            System.out.println("1. Registrar paciente");
+            System.out.println("1. Registrar usuarios.paciente");
             System.out.println("2. Registrar medico");
             System.out.println("3. Registrar consultorio");
             System.out.println("4. Registrar consulta");
@@ -157,7 +157,7 @@ public class Menu {
             System.out.println("6. Mostrar médicos");
             System.out.println("7. Mostrar consultorios");
             System.out.println("8. Mostrar consultas");
-            System.out.println("9. Mostrar paciente por ID");
+            System.out.println("9. Mostrar usuarios.paciente por ID");
             System.out.println("10. Mostrar Medico por ID");
             System.out.println("11. Mostrar Consultorio por ID");
             System.out.println("12. Salir");
@@ -169,11 +169,11 @@ public class Menu {
                     System.out.println("A elegido la opcion REGISTRAR PACIENTE");
                     String id = hospital.generarIDPaciente();
 
-                    System.out.println("Ingrese el nombre del paciente: ");
+                    System.out.println("Ingrese el nombre del usuarios.paciente: ");
                     String nombre = sc.nextLine();
 
 
-                    System.out.println("Ingrese el apellidos del paciente: ");
+                    System.out.println("Ingrese el apellidos del usuarios.paciente: ");
                     String apellidos = sc.nextLine();
 
 
@@ -186,25 +186,30 @@ public class Menu {
 
                     LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);
 
-                    System.out.println("Ingrese el tipo de sangre del paciente: ");
+                    System.out.println("Ingrese el tipo de sangre del usuarios.paciente: ");
                     String tipoSangre = sc.nextLine();
 
 
-                    System.out.println("Ingrese el sexo del paciente: ");
+                    System.out.println("Ingrese el sexo del usuarios.paciente: ");
                     char sexo = sc.nextLine().charAt(0);
 
 
                     //tarea 12
                     String telefono = null;
                     while (telefono == null) {
-                        System.out.println("Ingrese el teléfono del paciente: ");
+                        System.out.println("Ingrese el teléfono del usuarios.paciente: ");
                         telefono = sc.nextLine();
                         if (hospital.existeNumeroTelefonoPaciente(telefono)) {
                             System.out.println("El numero de telefono ya esta registrado, intente de nuevo.");
                             telefono = null;
                         }
                     }
-                    Paciente paciente = new Paciente(id, nombre, apellidos, fechaNacimiento, tipoSangre, sexo, telefono);
+
+
+                    System.out.println("Ingresa la contraseña: ");
+                    String contraseniaPaciente = sc.nextLine();
+
+                    Paciente paciente = new Paciente(id, nombre, apellidos, fechaNacimiento, tipoSangre, sexo, telefono, contraseniaPaciente);
                     hospital.registrarPaciente(paciente);
 
                     System.out.println("Paciente registrado exitosamente");
@@ -246,9 +251,11 @@ public class Menu {
                             rfcMedico = null;
                         }
                     }
+                    System.out.println("Ingrese la contraseña: ");
+                    String contraseniaMedico = sc.nextLine();
 
                     String idMedico = hospital.generarIDMedico(fechaNacimientoMedico.getYear(), apellidoMedico);
-                    Medico medico = new Medico(idMedico, nombreMedico, apellidoMedico, fechaNacimientoMedico, telefonoMedico, rfcMedico);
+                    Medico medico = new Medico(idMedico, nombreMedico, apellidoMedico, fechaNacimientoMedico, telefonoMedico, rfcMedico, contraseniaMedico);
 
                     hospital.registrarMedico(medico);
                     break;
@@ -309,11 +316,11 @@ public class Menu {
 
                     Paciente pacienteConsulta = null;
                     while (pacienteConsulta == null) {
-                        System.out.println("Ingresa el id del paciente: ");
+                        System.out.println("Ingresa el id del usuarios.paciente: ");
                         String pacienteId = sc.nextLine();
                         pacienteConsulta = hospital.obtenerPacientePorId(pacienteId);
                         if (pacienteConsulta == null) {
-                            System.out.println("\nEl id del paciente no existe, intenta de nuevo\n");
+                            System.out.println("\nEl id del usuarios.paciente no existe, intenta de nuevo\n");
                         }
                     }
 
@@ -351,7 +358,7 @@ public class Menu {
                     break;
                 case 6:
                     System.out.println("A elegido la opcion MOSTRAR MEDICOS");
-                    System.out.println("Los medicos son los siguientes: ");
+                    System.out.println("Los usuarios.medicos son los siguientes: ");
                     hospital.mostrarMedicos();
                     break;
                 case 7:
@@ -367,7 +374,7 @@ public class Menu {
                 case 9:
                     System.out.println("\nA elegido la opcion MOSTRAR PACIENTE POR ID");
                     sc.nextLine();
-                    System.out.println("Ingresa el ID del paciente que deseas buscar");
+                    System.out.println("Ingresa el ID del usuarios.paciente que deseas buscar");
                     String idPaciente = sc.nextLine();
 
                     hospital.mostrarPacientePorId(idPaciente);
