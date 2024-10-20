@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fddbf363-041a-4d44-a537-6024b37671d9" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tarea3/unidad3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mFSwZa4G4XE3TEfaQO79qitbwk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "tarea3/unidad3",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/josecruz/Documents/TareasPOOJoseGael",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ejercicioHospital/usuarios" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fddbf363-041a-4d44-a537-6024b37671d9" name="Changes" comment="" />
+      <created>1726671070184</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726671070184</updated>
+      <workItem from="1726671071213" duration="38000" />
+      <workItem from="1726755310229" duration="11299000" />
+      <workItem from="1727038782474" duration="1084000" />
+      <workItem from="1727054364306" duration="4808000" />
+      <workItem from="1727244753828" duration="19981000" />
+      <workItem from="1727880567617" duration="5632000" />
+      <workItem from="1728014569146" duration="3266000" />
+      <workItem from="1728051809948" duration="366000" />
+      <workItem from="1728052178763" duration="84000" />
+      <workItem from="1728052264440" duration="113000" />
+      <workItem from="1728052398480" duration="833000" />
+      <workItem from="1728053237075" duration="10000" />
+      <workItem from="1728053249832" duration="13000" />
+      <workItem from="1728053265149" duration="6000" />
+      <workItem from="1728053291558" duration="8000" />
+      <workItem from="1728053306397" duration="8000" />
+      <workItem from="1728053419634" duration="10000" />
+      <workItem from="1728053431460" duration="155000" />
+      <workItem from="1728059851661" duration="113000" />
+      <workItem from="1728059967753" duration="935000" />
+      <workItem from="1728396689537" duration="2834000" />
+      <workItem from="1728482194705" duration="714000" />
+      <workItem from="1728932819678" duration="19000" />
+      <workItem from="1729088049524" duration="736000" />
+      <workItem from="1729138462345" duration="5297000" />
+      <workItem from="1729315488664" duration="3907000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
