@@ -5,6 +5,7 @@ import ejercicioHospital.usuarios.Usuario;
 import ejercicioHospital.usuarios.utils.Rol;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Paciente extends Usuario {
     public String tipoSangre;
@@ -38,5 +39,4 @@ public class Paciente extends Usuario {
     public void registrarExpediente(Expediente expediente) {
         this.expedientes.add(expediente);
     }
-
 }

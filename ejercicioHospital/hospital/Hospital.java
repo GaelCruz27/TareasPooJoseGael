@@ -28,7 +28,7 @@ public class Hospital {
     Random random = new Random();
 
     public Hospital() {
-        Administrador administrador = new Administrador("A-123456", "Geovani", "Lobato", LocalDate.of(1980, 7, 11), "4498326548", "Geo1107*", 50000, "GD156AD5AEF", 5);
+        Administrador administrador = new Administrador("A-123456", "Gael", "Cruz", LocalDate.of(20005, 8, 27), "4439309285", "contrasnia", 50000, "qwefcxsd", 5);
         this.listaUsuarios.add(administrador);
         this.listaAdministradores.add(administrador);
     }
