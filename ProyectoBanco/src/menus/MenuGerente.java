@@ -89,7 +89,7 @@ public class MenuGerente {
                 System.out.println("Ingrese el salario mensual que se le asignara al empleado: ");
                 double salarioGerente = scanner.nextDouble();
 
-                String idG = banco.generarIdUsuario(nombreGerente, Rol.EJECUTIVO);
+                String idG = banco.generarIdUsuario(nombreGerente, Rol.GERENTE);
                 String curpG = banco.generarCurp();
                 String rfcG = banco.generarRfc();
 

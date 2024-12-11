@@ -11,6 +11,42 @@
       "sucursal": "Centro",
       "contrasenia": "123456789",
       "rol": "GERENTE"
+    },
+    {
+      "salario": 20000.0,
+      "id": "E-NIC20241289",
+      "nombre": "Nicole",
+      "apellidos": "Serrano",
+      "curp": "OEAW480504HECBKOPJ7",
+      "rfc": "EQKI120602SAX",
+      "direccion": "tu corazon",
+      "sucursal": "Centro",
+      "contrasenia": "1234",
+      "rol": "EJECUTIVO"
+    },
+    {
+      "salario": 100000.0,
+      "id": "E-OSC20241219",
+      "nombre": "Oscar",
+      "apellidos": "Aramis",
+      "curp": "KESO040217MFCUVJYY1",
+      "rfc": "JNKO951013LC9",
+      "direccion": "unidos123",
+      "sucursal": "Centro",
+      "contrasenia": "12345",
+      "rol": "GERENTE"
+    },
+    {
+      "salario": 1.234E7,
+      "id": "G-GAE20241266",
+      "nombre": "Gael",
+      "apellidos": "Cruz",
+      "curp": "UAKA530406MNLOVJAU2",
+      "rfc": "DOFF800407N1O",
+      "direccion": "Weed",
+      "sucursal": "Centrp",
+      "contrasenia": "1234",
+      "rol": "GERENTE"
     }
   ],
   "listaGerentes": [
@@ -25,13 +61,46 @@
       "sucursal": "Centro",
       "contrasenia": "123456789",
       "rol": "GERENTE"
+    },
+    {
+      "salario": 100000.0,
+      "id": "E-OSC20241219",
+      "nombre": "Oscar",
+      "apellidos": "Aramis",
+      "curp": "KESO040217MFCUVJYY1",
+      "rfc": "JNKO951013LC9",
+      "direccion": "unidos123",
+      "sucursal": "Centro",
+      "contrasenia": "12345",
+      "rol": "GERENTE"
+    },
+    {
+      "salario": 1.234E7,
+      "id": "G-GAE20241266",
+      "nombre": "Gael",
+      "apellidos": "Cruz",
+      "curp": "UAKA530406MNLOVJAU2",
+      "rfc": "DOFF800407N1O",
+      "direccion": "Weed",
+      "sucursal": "Centrp",
+      "contrasenia": "1234",
+      "rol": "GERENTE"
     }
   ],
   "listaEjecutivos": [
-
+    {
+      "salario": 20000.0,
+      "id": "E-NIC20241289",
+      "nombre": "Nicole",
+      "apellidos": "Serrano",
+      "curp": "OEAW480504HECBKOPJ7",
+      "rfc": "EQKI120602SAX",
+      "direccion": "tu corazon",
+      "sucursal": "Centro",
+      "contrasenia": "1234",
+      "rol": "EJECUTIVO"
+    }
   ],
-  "listaClientes": [
-
-  ],
+  "listaClientes": [],
   "solicitudesTarjetaCredito": []
 }
