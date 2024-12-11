@@ -1,0 +1,119 @@
+{
+  "listaUsuarios": [
+    {
+      "salario": 52000.0,
+      "id": "G-ISA202411",
+      "nombre": "Isauro",
+      "apellidos": "Bucio Hurtado",
+      "curp": "IXBA841020MHGTZR04",
+      "rfc": "ISBH841020H12",
+      "direccion": "Av. Reforma 101",
+      "sucursal": "Centro",
+      "contrasenia": "pass123",
+      "rol": "GERENTE"
+    },
+    {
+      "salario": 18000.0,
+      "id": "E-RAU20241264",
+      "nombre": "Raul",
+      "apellidos": "De Labastida",
+      "curp": "RDLB821215HGRNRR05",
+      "rfc": "RDLB821215G34",
+      "direccion": "Col. Del Valle",
+      "sucursal": "Sur",
+      "contrasenia": "securepass",
+      "rol": "EJECUTIVO"
+    },
+    {
+      "numeroCuenta": "98765432109876543210",
+      "tarjetaDebito": {
+        "saldoDebito": 45000.0,
+        "titular": "Ernesto Yandel",
+        "numeroTarjeta": "1234567812345678",
+        "fechaCreacion": "2024-12-03",
+        "cvv": 123,
+        "fechaVencimiento": "2029-12-03"
+      },
+      "tarjetaCredito": {
+        "limiteDeCredito": 85000.0,
+        "deudaCredito": 2500.0,
+        "titular": "Ernesto Yandel",
+        "numeroTarjeta": "8765432187654321",
+        "fechaCreacion": "2024-12-03",
+        "cvv": 456,
+        "fechaVencimiento": "2029-12-03"
+      },
+      "clave": "987654321012345678",
+      "id": "C-ERN20241250",
+      "nombre": "Ernesto",
+      "apellidos": "Yandel",
+      "curp": "EYND860505HGRMPL06",
+      "rfc": "EYND860505K76",
+      "direccion": "Av. Insurgentes 300",
+      "sucursal": "Norte",
+      "contrasenia": "mypassword",
+      "rol": "CLIENTE"
+    }
+  ],
+  "listaGerentes": [
+    {
+      "salario": 52000.0,
+      "id": "G-ISA202411",
+      "nombre": "Isauro",
+      "apellidos": "Bucio Hurtado",
+      "curp": "IXBA841020MHGTZR04",
+      "rfc": "ISBH841020H12",
+      "direccion": "Av. Reforma 101",
+      "sucursal": "Centro",
+      "contrasenia": "pass123",
+      "rol": "GERENTE"
+    }
+  ],
+  "listaEjecutivos": [
+    {
+      "salario": 18000.0,
+      "id": "E-RAU20241264",
+      "nombre": "Raul",
+      "apellidos": "De Labastida",
+      "curp": "RDLB821215HGRNRR05",
+      "rfc": "RDLB821215G34",
+      "direccion": "Col. Del Valle",
+      "sucursal": "Sur",
+      "contrasenia": "securepass",
+      "rol": "EJECUTIVO"
+    }
+  ],
+  "listaClientes": [
+    {
+      "numeroCuenta": "98765432109876543210",
+      "tarjetaDebito": {
+        "saldoDebito": 45000.0,
+        "titular": "Ernesto Yandel",
+        "numeroTarjeta": "1234567812345678",
+        "fechaCreacion": "2024-12-03",
+        "cvv": 123,
+        "fechaVencimiento": "2029-12-03"
+      },
+      "tarjetaCredito": {
+        "limiteDeCredito": 85000.0,
+        "deudaCredito": 2500.0,
+        "titular": "Ernesto Yandel",
+        "numeroTarjeta": "8765432187654321",
+        "fechaCreacion": "2024-12-03",
+        "cvv": 456,
+        "fechaVencimiento": "2029-12-03"
+      },
+      "clave": "987654321012345678",
+      "id": "C-ERN20241250",
+      "nombre": "Ernesto",
+      "apellidos": "Yandel",
+      "curp": "EYND860505HGRMPL06",
+      "rfc": "EYND860505K76",
+      "direccion": "Av. Insurgentes 300",
+      "sucursal": "Norte",
+      "contrasenia": "mypassword",
+      "rol": "CLIENTE"
+    }
+  ],
+  "solicitudesTarjetaCredito": []
+}

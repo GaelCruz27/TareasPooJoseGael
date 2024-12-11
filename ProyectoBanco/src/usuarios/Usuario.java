@@ -13,15 +13,7 @@ public class Usuario {
     private String contrasenia;
     private Rol rol;
 
-    public Usuario(String id,
-                   String nombre,
-                   String apellidos,
-                   String curp,
-                   String rfc,
-                   String direccion,
-                   String sucursal,
-                   String contrasenia,
-                   Rol rol){
+    public Usuario(String id, String nombre, String apellidos, String curp, String rfc, String direccion, String sucursal, String contrasenia, Rol rol) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -44,6 +36,7 @@ public class Usuario {
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

@@ -1,21 +1,22 @@
-package tarjetas;
+package Tarjetas;
 
-public class Credito extends Wallet{
-    private double limiteCredito;
+
+public class Credito extends Tarjeta {
+    private double limiteDeCredito;
     private double deudaCredito;
 
     public Credito(String titular, String numeroTarjeta) {
         super(titular, numeroTarjeta);
-        this.limiteCredito = 100000.0;
-        this.deudaCredito = 0.0;
+        this.limiteDeCredito = 100000.0;
+        this.deudaCredito = 0;
     }
 
-    public double getLimiteCredito() {
-        return limiteCredito;
+    public double getLimiteDeCredito() {
+        return limiteDeCredito;
     }
 
-    public void setLimiteCredito(double limiteCredito) {
-        this.limiteCredito = limiteCredito;
+    public void setLimiteDeCredito(double limiteDeCredito) {
+        this.limiteDeCredito = limiteDeCredito;
     }
 
     public double getDeudaCredito() {
@@ -31,7 +32,7 @@ public class Credito extends Wallet{
         setDeudaCredito(deudaCredito + gasto);
     }
 
-    public void abonoADeuda(double abono) {
+    public void abonarADeuda(double abono) {
         setLimiteDeCredito(limiteDeCredito + abono);
         setDeudaCredito(deudaCredito - abono);
     }

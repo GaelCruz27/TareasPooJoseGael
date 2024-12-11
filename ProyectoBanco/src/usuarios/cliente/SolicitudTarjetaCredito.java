@@ -1,12 +1,13 @@
+
 package usuarios.cliente;
 
 public class SolicitudTarjetaCredito {
     private Cliente cliente;
-    private String analisis;
+    private String estado;
 
     public SolicitudTarjetaCredito(Cliente cliente) {
         this.cliente = cliente;
-        this.analisis = "procesando";
+        this.estado = "pendiente";
     }
 
     public Cliente getCliente() {
