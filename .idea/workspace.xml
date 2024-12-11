@@ -5,10 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cce0a624-3a00-4a74-9ae0-50ce9718a2ac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/carreras/Simulacion.Py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/clase/PooU6Practica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hola" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/banco/Banco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/excepciones/FondosInsuficientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/excepciones/Operadora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/menus/MenuAcceso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/tarjetas/Credito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/tarjetas/Debito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/tarjetas/Wallet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/usuarios/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/usuarios/cliente/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/usuarios/cliente/SolicitarTarjetaC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/usuarios/ejecutivo/Ejecutivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/usuarios/gerente/Gerente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/utils/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoBanco/src/vector/Diseno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/ProyectoFinal2.0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Banco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/EjecutivoCuenta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Empleado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/FondosInsuficientesException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Gerente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/ManejadorArchivos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Operacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/OperacionNoAutorizadaException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Persona.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/RolEmpleado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Sucursal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/Tarjeta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/TarjetaCredito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/TarjetaDebito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/out/production/ProyectoFinal2.0/sistemabancario/TipoOperacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/banco/Banco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/menu/MenuCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/menu/MenuEjecutivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/menu/MenuGerente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/menu/MenuPrincipal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/tarjetas/Credito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/tarjetas/Debito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/tarjetas/Tarjeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/cliente/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/ejecutivo/Ejecutivo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/gerente/Gerente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/utils/JsonManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/utils/LocalDateAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinal2.0/src/usuarios/utils/Rol.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +68,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -27,40 +84,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/josecruz/Documents/TareasPOOJoseGael/src/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PROYECTO__FINAL&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/josecruz/Documents/TareasPOOJoseGael&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/josecruz/Documents/TareasPOOJoseGael/src/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="TareasPOOJoseGael" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="TareasPOOJoseGael" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -75,11 +119,28 @@
       <workItem from="1731561843820" duration="59000" />
       <workItem from="1731562003893" duration="1876000" />
       <workItem from="1731679977387" duration="1495000" />
+      <workItem from="1733426722069" duration="702000" />
+      <workItem from="1733838730612" duration="42000" />
+      <workItem from="1733838774684" duration="6000" />
+      <workItem from="1733851099888" duration="11000" />
+      <workItem from="1733851573231" duration="269000" />
+      <workItem from="1733851892960" duration="9317000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
