@@ -26,9 +26,15 @@ public class MenuAcceso {
 
         while (intentosUsuario < intentosMaximos) {
 
-            System.out.println("¿Desea salir del programa? (x) para salir:");
-            String salir = scanner.nextLine();
-            System.out.println("¿Desea iniciar secion? (i) para iniciar sesion:");
+            System.out.println("1. INICIAR SESION");
+            System.out.println("\n2. SALIR");
+
+            System.out.println("Que deseas hacer ?");
+            int respuesta= scanner.nextInt();
+            if (respuesta==2) {
+                System.out.println("Saliendo...");
+                return;
+            }
             String iniciarSesion = scanner.nextLine();
             System.out.println("\n-- MENU ACCESO --");
 
