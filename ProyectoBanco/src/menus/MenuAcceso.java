@@ -5,27 +5,24 @@ import usuarios.Usuario;
 import usuarios.cliente.Cliente;
 import usuarios.ejecutivo.Ejecutivo;
 import usuarios.gerente.Gerente;
+import usuarios.utils.dieños.MostrarImagen;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import usuarios.utils.dieños.MostrarImagen;
 
 public class MenuAcceso {
     Banco banco;
     Scanner scanner = new Scanner(System.in);
-
+    MostrarImagen mostrarImagen = new MostrarImagen();
     public MenuAcceso(Banco banco) {
         this.banco = banco;
     }
 
     public void iniciarSesion() {
         int intentosMaximos = 3, intentosUsuario = 0;
-
-
-    //Aqui falta el diseño del banco
-
-
         while (intentosUsuario < intentosMaximos) {
-
+            mostrarImagen.mImagen();
             System.out.println("1. INICIAR SESION");
             System.out.println("\n2. SALIR");
 
